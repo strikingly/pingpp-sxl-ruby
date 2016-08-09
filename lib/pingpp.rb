@@ -42,7 +42,7 @@ require 'pingpp/wx_pub_oauth'
 
 module Pingpp
   DEFAULT_CA_BUNDLE_PATH = File.dirname(__FILE__) + '/data/ca-certificates.crt'
-  @api_base = 'https://api.pingxx.com'
+  @api_base = 'http://api.pingpluspl.us'
 
   @api_version = '2015-10-10'
 
@@ -92,7 +92,6 @@ module Pingpp
 
     if verify_ssl_certs
       request_opts = {:verify_ssl => OpenSSL::SSL::VERIFY_PEER,
-                      :ssl_ca_file => @ssl_bundle_path,
                       :ssl_version => 'TLSv1'}
     else
       request_opts = {:verify_ssl => false,
