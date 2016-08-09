@@ -92,7 +92,6 @@ module Pingpp
 
     if verify_ssl_certs
       request_opts = {:verify_ssl => OpenSSL::SSL::VERIFY_PEER,
-                      :ssl_ca_file => @ssl_bundle_path,
                       :ssl_version => 'TLSv1'}
     else
       request_opts = {:verify_ssl => false,
