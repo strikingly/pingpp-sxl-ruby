@@ -199,7 +199,6 @@ module Pingpp
   end
 
   def self.execute_request(opts)
-    RestClient.proxy = 'http://127.0.0.1:8888'
     RestClient::Request.execute(opts)
   end
 
