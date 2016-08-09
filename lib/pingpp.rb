@@ -42,7 +42,7 @@ require 'pingpp/wx_pub_oauth'
 
 module Pingpp
   DEFAULT_CA_BUNDLE_PATH = File.dirname(__FILE__) + '/data/ca-certificates.crt'
-  @api_base = 'https://api.pingpluspl.us'
+  @api_base = 'http://api.pingpluspl.us'
 
   @api_version = '2015-10-10'
 
@@ -199,7 +199,6 @@ module Pingpp
   end
 
   def self.execute_request(opts)
-    RestClient.proxy = 'http://127.0.0.1:8888'
     RestClient::Request.execute(opts)
   end
 
