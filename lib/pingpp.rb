@@ -42,7 +42,7 @@ require 'pingpp/wx_pub_oauth'
 
 module Pingpp
   DEFAULT_CA_BUNDLE_PATH = File.dirname(__FILE__) + '/data/ca-certificates.crt'
-  @api_base = 'https://api.pingxx.com'
+  @api_base = 'https://api.pingpluspl.us'
 
   @api_version = '2015-10-10'
 
